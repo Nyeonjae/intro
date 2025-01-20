@@ -1,0 +1,389 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+body {
+  list-style-type: none;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-inline: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #121111;
+  font-size: 0.8rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, Roboto, "Noto Sans KR", "Segoe UI", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cover {
+  width: 20rem;
+  height: 20rem;
+  background-color: red;
+}
+
+#mac-main {
+  width: 97%;
+  height: 93%;
+  background-color: #f2f2f2;
+  border-radius: 0.5rem;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+#mac-main > .mac-header {
+  width: 100%;
+  background-color: #b8b7b7;
+  height: 3%;
+  color: #202020;
+  font-weight: 500;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  user-select: none;
+  position: absolute;
+  z-index: 2;
+}
+#mac-main > .mac-header > .status-left {
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  gap: 0.7rem;
+  justify-content: flex-start;
+  margin-left: 2rem;
+}
+#mac-main > .mac-header > .status-left > .status:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#mac-main > .mac-header > .status-right {
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  gap: 0.9rem;
+  justify-content: flex-end;
+  padding: 2rem;
+}
+#mac-main > .mac-header > .status-right > i {
+  font-size: 1rem;
+  vertical-align: center;
+}
+#mac-main > .mac-header > .spring {
+  flex-grow: 1;
+}
+#mac-main > .display {
+  width: 100%;
+  height: 100%;
+  background-color: #1b1a1a;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#mac-main > .display > .code-frame {
+  pointer-events: none;
+  user-select: none;
+}
+#mac-main > .display > .code-frame > .class-code {
+  font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+#mac-main > .display > .code-frame > .class-code > .const-name {
+  color: #4eac81;
+}
+#mac-main > .display > .code-frame > .class-code > .intro-name {
+  color: #911010;
+}
+#mac-main > .display > .code-frame > .class-code > .yellow {
+  color: #e6b513;
+}
+#mac-main > .display > .code-frame > .class-code > .neon-text {
+  text-shadow: 0 0 5px #ff3333, 0 0 10px #ff3333, 0 0 15px #ff3333, 0 0 20px #ff6666, 0 0 30px #ff6666, 0 0 40px #ff6666, 0 0 50px #ff6666, 0 0 75px #ff6666;
+  animation-name: neon-flicker;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+#mac-main > .display > .code-frame > .intro {
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  display: flex;
+  flex-direction: row;
+}
+#mac-main > .display > .code-frame > .intro > .white {
+  color: #d1c7c7;
+}
+#mac-main > .display > .code-frame > .intro > .green {
+  color: #44855c;
+}
+#mac-main > .display > .code-frame > .intro > .red {
+  color: #911010;
+}
+#mac-main > .app-container {
+  position: fixed;
+  bottom: 5rem;
+  width: 680px;
+  background-color: rgba(240, 240, 240, 0.1);
+  border-radius: 1rem;
+  gap: 1.25rem;
+  box-sizing: content-box;
+  overflow: hidden auto;
+  align-items: flex-end;
+  display: flex;
+  flex-direction: row;
+  padding: 0.7rem 0;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+#mac-main > .app-container > .app-frame, #mac-main > .app-container .image-frame {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  justify-content: center;
+}
+#mac-main > .app-container > .app-frame > span, #mac-main > .app-container .image-frame > span {
+  color: #ffffff;
+}
+#mac-main > .app-container > .app-frame > a, #mac-main > .app-container .image-frame > a {
+  transition: transform 0.3s ease-in-out;
+}
+#mac-main > .app-container > .app-frame > a > .image1, #mac-main > .app-container .image-frame > a > .image1 {
+  background-color: #e4e400;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+#mac-main > .app-container > .app-frame > a > .image1:hover, #mac-main > .app-container .image-frame > a > .image1:hover {
+  filter: brightness(80%);
+}
+#mac-main > .app-container > .app-frame > a > .image1:active, #mac-main > .app-container .image-frame > a > .image1:active {
+  filter: brightness(70%);
+}
+#mac-main > .app-container > .app-frame > a > .image, #mac-main > .app-container .image-frame > a > .image {
+  width: 5rem;
+  height: 5rem;
+  background-color: #f2f2f2;
+  border-radius: 0.7rem;
+  cursor: pointer;
+}
+#mac-main > .app-container > .app-frame > a > .image:hover, #mac-main > .app-container .image-frame > a > .image:hover {
+  filter: brightness(80%);
+}
+#mac-main > .app-container > .app-frame > a > .image:active, #mac-main > .app-container .image-frame > a > .image:active {
+  filter: brightness(70%);
+}
+#mac-main > .app-container > .app-frame > .app, #mac-main > .app-container .image-frame > .app {
+  width: 5rem;
+  height: 5rem;
+  border: 0.0625rem solid #9a9a9a;
+  border-radius: 0.7rem;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#mac-main > .app-container > .app-frame > .app > span, #mac-main > .app-container .image-frame > .app > span {
+  color: #ffffff;
+  font-size: 1.3rem;
+}
+#mac-main > .app-container > .app-frame > .app:hover, #mac-main > .app-container .image-frame > .app:hover {
+  filter: brightness(80%);
+}
+#mac-main > .app-container > .app-frame > .app:active, #mac-main > .app-container .image-frame > .app:active {
+  filter: brightness(70%);
+}
+#mac-main > .app-container > .app-frame > :hover, #mac-main > .app-container .image-frame > :hover {
+  transform: scale(1.2);
+}
+
+@keyframes neon-flicker {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 5px #ff3333, 0 0 10px #ff3333, 0 0 15px #ff3333, 0 0 20px #ff6666, 0 0 30px #ff6666, 0 0 40px #ff6666, 0 0 50px #ff6666, 0 0 75px #ff6666;
+  }
+  50% {
+    opacity: 0.4;
+    text-shadow: 0 0 5px #ff3333, 0 0 10px #ff3333, 0 0 15px #ff3333, 0 0 20px #ff4444, 0 0 30px #ff4444, 0 0 40px #ff4444, 0 0 50px #ff4444, 0 0 75px #ff4444;
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 5px #ff3333, 0 0 10px #ff3333, 0 0 15px #ff3333, 0 0 20px #ff6666, 0 0 30px #ff6666, 0 0 40px #ff6666, 0 0 50px #ff6666, 0 0 75px #ff6666;
+  }
+}
+#info, #tech, #experience, #project {
+  top: 50%;
+  left: 50%;
+  width: calc(85% + 2.5rem);
+  height: calc(78% + 2.5rem);
+  background-color: #f0f0f0;
+  border-radius: 0.6rem;
+  color: #212121;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  transform: translate(-50%, -50%) scale(0.8);
+  transition-duration: 250ms;
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+  z-index: 8;
+  align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  justify-content: flex-start;
+}
+#info.-visible, #tech.-visible, #experience.-visible, #project.-visible {
+  opacity: 1;
+  pointer-events: all;
+  transform: scale(1) translate(-50%, -50%);
+}
+
+#info {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+}
+#info > .profile {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+#info > .profile > .image {
+  width: 10rem;
+}
+#info > .profile > .image > .intro {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#info, #tech, #experience, #project {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  outline: none;
+}
+#info > .modal-bar, #tech > .modal-bar, #experience > .modal-bar, #project > .modal-bar {
+  height: 3rem;
+  width: 100%;
+  background-color: #535353;
+  border-top-right-radius: 0.6rem;
+  border-top-left-radius: 0.6rem;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.3rem;
+  justify-content: flex-start;
+}
+#info > .modal-bar > .bar-container, #tech > .modal-bar > .bar-container, #experience > .modal-bar > .bar-container, #project > .modal-bar > .bar-container {
+  background-color: #535353;
+  width: 97%;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  gap: 0.2rem;
+  padding-left: 1rem;
+}
+#info > .modal-bar > .bar-container > img, #tech > .modal-bar > .bar-container > img, #experience > .modal-bar > .bar-container > img, #project > .modal-bar > .bar-container > img {
+  width: 1.5rem;
+  cursor: pointer;
+}
+#info > .modal-bar > .bar-container > .right, #tech > .modal-bar > .bar-container > .right, #experience > .modal-bar > .bar-container > .right, #project > .modal-bar > .bar-container > .right {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.4rem;
+  padding-right: 0.3rem;
+}
+#info > .modal-bar > .bar-container > .right > img, #tech > .modal-bar > .bar-container > .right > img, #experience > .modal-bar > .bar-container > .right > img, #project > .modal-bar > .bar-container > .right > img {
+  cursor: pointer;
+}
+#info > .modal-bar > .bar-container > .left, #tech > .modal-bar > .bar-container > .left, #experience > .modal-bar > .bar-container > .left, #project > .modal-bar > .bar-container > .left {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-left: 1rem;
+}
+#info > .modal-bar > .bar-container > .left > img, #tech > .modal-bar > .bar-container > .left > img, #experience > .modal-bar > .bar-container > .left > img, #project > .modal-bar > .bar-container > .left > img {
+  cursor: pointer;
+}
+#info > .modal-bar > .bar-container > .left > .ltgt, #tech > .modal-bar > .bar-container > .left > .ltgt, #experience > .modal-bar > .bar-container > .left > .ltgt, #project > .modal-bar > .bar-container > .left > .ltgt {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 0.8rem;
+  justify-content: center;
+}
+#info > .modal-bar > .bar-container > .left > .ltgt > img, #tech > .modal-bar > .bar-container > .left > .ltgt > img, #experience > .modal-bar > .bar-container > .left > .ltgt > img, #project > .modal-bar > .bar-container > .left > .ltgt > img {
+  cursor: pointer;
+}
+#info > .modal-bar > .bar-container > .spring, #tech > .modal-bar > .bar-container > .spring, #experience > .modal-bar > .bar-container > .spring, #project > .modal-bar > .bar-container > .spring {
+  flex-grow: 1;
+}
+
+#display > .modal {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+#display > .modal > .content {
+  width: 93%;
+  height: auto;
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+#display > .modal > .content > h2 {
+  text-decoration: underline;
+  text-underline-offset: 0.5rem;
+}
+#display > .modal > .content > .chapter {
+  width: 100%;
+  height: auto;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: flex-end;
+  font-size: 1.5rem;
+}
+#display > .modal > .content > .chapter > h2 {
+  font-size: 3rem;
+  text-decoration: underline;
+  text-underline-offset: 0.3rem;
+}
+#display > .modal > .content > .chapter > .sub-title {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#display > .modal > .content > h2 {
+  font-size: 2rem;
+}
+#display > .modal > .content > table > tr > th > img {
+  width: 2rem;
+}
+
+/*# sourceMappingURL=mymac.css.map */

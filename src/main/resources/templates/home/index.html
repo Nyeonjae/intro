@@ -1,0 +1,447 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>프로포폴</title>
+    <link rel="shortcut icon" href="./assets/images/favicon/njfavi.ico">
+    <link rel="stylesheet" href="/assets/styles/mymac.css" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+          rel="stylesheet" type="text/css">
+    <script defer src="/assets/scripts/mymac.js" type="text/javascript"></script>
+    <script src="/assets/scripts/common.js" type="text/javascript"></script>
+</head>
+<body>
+
+<main id="mac-main">
+    <!--상단 작업 표시줄-->
+    <div class="mac-header spring">
+        <div class="status-left">
+            <i class="fa-brands fa-apple"></i>
+            <span class="name">Nyeonjae</span>
+            <span class="status">File</span>
+            <span class="status">Edit</span>
+            <span class="status">View</span>
+            <span class="status">History</span>
+            <span class="status">Window</span>
+            <span class="status">Help</span>
+        </div>
+
+        <div class="spring">
+        </div>
+
+        <div class="status-right">
+            <i class="fa-sharp fa-solid fa-battery-full"></i>
+            <i class="fa-brands fa-bluetooth-b"></i>
+            <i class="fa-solid fa-wifi"></i>
+            <i class="fa-solid fa-volume-high"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-sliders"></i>
+            <div id="clock">
+                <span class="date">
+                    <span class="md"></span>
+                    <span class="day"></span>
+                </span>
+                <span class="time">
+                    <span class="hour"></span>
+                    <span class="colon">:</span>
+                    <span class="minute"></span>
+                </span>
+            </div>
+        </div>
+    </div>
+
+
+    <!--메인 디스플레이-->
+
+    <section id="display" class="display">
+
+        <!-- 자기소개 -->
+        <div id="info" class="modal -visible">
+            <div class="modal-bar">
+                <div class="bar-container">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoElEQVR4nO2Wz07CQBDG+xIe/BuPHvQEN/UBTLTdb5q+hAI+izeNxoNH7yhvIr6ABm+IYHeBYAbBlMhuh1IjByaZZNN08tv5dmZ2PW9pi2adKNoyQFkDNQPUNfDBPlrXDFGpEwSbuQHbUbRugCsN9AzRwOUa6Bui+88g2J4LGhMpDbTSgL82QPQeA34mqCE6H2UwE3Qie6CSJdN+VmgSLs68DWxkkdcle9v31yQS3+YFTfh1ass4qnffhGFREzWmZNUwShWMUgcWyXuspD1boGzdtVIF/kcDu0k4r/nbMD4Mi9Z44MwK1kSPjrP6AYzh0745Cq3qOt/nlEKZBAmho4zr9owF1ayBNx0Ee+OYmGhHA6+CuFb+YKIXQVxzAaWm/yuu0h+206kVzPepdYDwcHANEIaG4aFFra5zgAx3DdykFcqsrokuPcnFz4M9NyjQHACrnsS6Sh1JXhwCaD8mOhFBE5JXcngIlL0sFgN+FtlZ3q5Sx948NoiiFU10wZUpzPJOfKYS43bgq00TPRjgicfrcMR+r6vcp6ktszTvH+wL49CEhXrLKn4AAAAASUVORK5CYII="
+                         alt="macos-close">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABb0lEQVR4nO2WTU7DMBCFcwhQ5qU/4hyoHAAJENcAWjgLOxCIBUv2/GybmQI3aBGnoLCqjYwclVJQ4sRpIrrok2YTKfoyz88zCYKVlk2G0daCnmZ6UEwjJfhIimlkn2lG1/SjVnXAx2ZDCc6VQGuBcZVifGrBjXkKNxaCqhj7SvCeB0z5gLGSaK8UVDNOph14QX91P8Cxf6dcHjoPL9y5eW40y9jrst1IK8rvlumqKugPnC7c3TLaRdLrDRZo62Qm2IahauisODzKBgvu6wPj1nW+r3WBFdPIAcb47wuTQbQZeGrC6KSlO/ACMzreYMGWH1jopUarh8sXLs3o1gYWOsgE231a0wBRzgEyPefLGsBnTuhs8aeku3yo8Gb6a8gFJ10zbVdhebIWOdotBJ2f2wv/CAh6XtBv2SVexnZrr4rDnWARmZjWFdOpTWYhawXXhc+0iOx1sKtNC+7sFLJ/KUkxDe1w0DEd5l6ZlYJ/0BeEavbtBLBMZAAAAABJRU5ErkJggg=="
+                         alt="macos-minimize">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjklEQVR4nO2WS0oDQRCGqw/hwkeCZzFVkwgaXAjZeAHNw7O4UxQXLt37OIUhXYMz4ilM3JkQ6THIwKRrKp2ALlLQm6Gbr/9/qv4ZgHX9u4qxCrbWNZaeDWNqGD9nK3XPwGIHOKqsDtjf2zaMV4ZxbJim4rI4MUz30K/vLge10ZGxNCoFFi8whBibYVDG85mCxaA59WCpF6AUw6F5uFr5oLETZK9ke4JbpVzDdLsy6C+crmVqjFVF934BRy3h4nPO4Ng56Qdb6ulU4BgsnejBNIWY2n6bLT1JSjXKhfMPAhjfhRsfF+FF5YJLqaTY283ZBgVcaLBROFgBF8bqww9meisFl8AFq5Og5ips5qg1r+GCmgssdtRgr3LPecZTP5ijii9AhDPzlBdDZyAFyM9I3WgULLbwElQffovDlUFdN7/WN0FVA9pX/XGUQyfAdKiD5nN76R+BWheCKsZmkO3OXo4OYKl6aWwYxgvV2DiHLN3p36mm3DjE1DaMjy6FsnjNIhaTLByYzkpHZl3wB/UN0M1xl0A5QKYAAAAASUVORK5CYII="
+                         alt="macos-full-screen">
+                    <div class="left">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbklEQVR4nO2UMQqAMAxFcy7RXfH+F6je40mHgkNJozXYQt/0ISGPZIjI4AnADpy85wA2TRAbagmaIDEBcyZTuIDecxPEgUsmfyaoQn4T9A+GtTHU2hZo9CHA+0R4CzSaEASc3/VaKQlxhmXbgSQuRiRq4DmZmNQAAAAASUVORK5CYII="
+                             alt="web-design">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXUlEQVR4nO3RQQ2AQBAEwfUvbU1BkMCvD6qSETDpGX5md69nc7p1JEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRms8UYd65AQuRNXyM09jbAAAAAElFTkSuQmCC"
+                             alt="vertical-line">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbklEQVR4nO2PQQqAIBBFa9FZ25QFXSR3HTZ6IVlINFA24GYeiIv5/jdWlWEYZQEajYz0sAfWcL/IdDmCkYMNcA9zF2eBIUdQA3MiuUqANilfQvazQJKgVX6T+ERylvvf5cJPdDYXJFM8uuWGUZYd/E6/69UyskUAAAAASUVORK5CYII="
+                             alt="expand-arrow--v1">
+                        <div class="ltgt">
+                            <img style="width: 1.8rem;"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2klEQVR4nO3YTQqCUBTF8Tto0segolYYtIqgZUVBiAkP7+3ltXA/RSBhUDTsHTk/cOLsz9GHKEJERASmqqplWZYrQY9Q1ZuZ3VV1I+gR1l5wMTHGhZlduxHtdcyybCAIiqKYmVn8EHFqmmYiCApGJIJLJLbEGfrFdvcpI1LgXCIR3oclQghzVb18+naKMY4EZQlVNeglehXyxBjAZfI+PWZ5XddjQeKMAVtGVQ8hhKEgccYkissAHs17uAMgfP/s38H8Mv2xzFYQ+XsMZkT3MTOz9esGERGR/NcD8Tj5NxZA3sEAAAAASUVORK5CYII="
+                                 alt="less-than">
+                            <img style="width: 1.8rem;"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzklEQVR4nO3W2wkCMRSE4WMvgrdmBMXGvGFFyczuViF4aUEfIisKIss+Sk6cD1LAzwQSMxERkUzEGOd1XY/NM5ILADeSVwAzcx6RXufiMgbA4SPieQCcSI7Mk5TSgOTuO6ZdJsY4NU+SYjJeBsC2mGsGxThbJoQwsUJizl5jNorJTXHLkNx3xBybphmaw2XWXcvA06+574rBS0jP59LP1epZQhE/pSVyoSVyoSVyoSVykUp4sVtFRLQArEjeXUd0xPiNeKuqauk+QkRE/tIDBGYCLggXKOAAAAAASUVORK5CYII="
+                                 alt="more-than">
+                        </div>
+                    </div>
+                    <span class="spring"></span>
+                    <div class="right">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtElEQVR4nO2SMQ6DMAxFuQSoR0A9Sc7dDgztVIbuqVT1Fg+BMiES7GCKWuWNUeJn/7iqCr8IcCVOd5SY3cSzJmrg8VUx0AB98PUiMeCAFzo+wDkibaRibykN5yLx+qX1P30CJ1VNMsSxSWfbfjEVJ+Kd4td0P7ElXqAF3ruIScQbFg5zMYlF0jSfI74tTaqpkSvugPuSVFrD5pFFDYo4gxK1iCOXy2OD14qdgXx875RBFf6MAeVoDxazOQxKAAAAAElFTkSuQmCC"
+                             alt="external-link">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVElEQVR4nO3RsQ2AMBAEwe+/aZM7RCAvaKaCO+0MAPCutZmvWo7EKFKjSI0iNYrUKFKTK7IOG0c2ijxkTssNusuRGkVqFKlRpEaRGkVqflMEAOYjLpeMvG6ZmsnRAAAAAElFTkSuQmCC"
+                             alt="plus-math">
+
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAASklEQVR4nO3TOw4AIAgE0b3/pddGOyp/QZzXk0wCSEBG3qBGgC7P1gjYwkHA1btw5gBNIMCsoOMI9dwbDv8FRAhwlhWseDsA0CENH8r9H6P4Sd0AAAAASUVORK5CYII="
+                             alt="clone-figure">
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h2>About ME</h2>
+                <div class="chapter">
+                    <h2>01</h2>
+                    <div class="sub-title">
+                        <span>자기소개 입니다.</span>
+                        <span>자기소개 입니다.</span>
+                        <span>자기소개 입니다.</span>
+                        <span>자기소개 입니다.</span>
+                    </div>
+                </div>
+                <div class="chapter">
+                    <h2>01</h2>
+                    <div class="sub-title">
+                        <span>자기소개 입니다.</span>
+                        <span>자기소개 입니다.</span>
+                        <span>자기소개 입니다.</span>
+                        <span>자기소개 입니다.</span>
+                    </div>
+                </div>
+                <div class="chapter">
+                    <h2>01</h2>
+                    <div class="sub-title">
+                        <span>자기소개 입니다.</span>
+                        <span>자기소개 입니다.</span>
+                        <span>자기소개 입니다.</span>
+                        <span>자기소개 입니다.</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- 할?줄?아는거 -->
+
+        <div id="tech" class="modal">
+            <div class="modal-bar">
+                <div class="bar-container">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoElEQVR4nO2Wz07CQBDG+xIe/BuPHvQEN/UBTLTdb5q+hAI+izeNxoNH7yhvIr6ABm+IYHeBYAbBlMhuh1IjByaZZNN08tv5dmZ2PW9pi2adKNoyQFkDNQPUNfDBPlrXDFGpEwSbuQHbUbRugCsN9AzRwOUa6Bui+88g2J4LGhMpDbTSgL82QPQeA34mqCE6H2UwE3Qie6CSJdN+VmgSLs68DWxkkdcle9v31yQS3+YFTfh1ass4qnffhGFREzWmZNUwShWMUgcWyXuspD1boGzdtVIF/kcDu0k4r/nbMD4Mi9Z44MwK1kSPjrP6AYzh0745Cq3qOt/nlEKZBAmho4zr9owF1ayBNx0Ee+OYmGhHA6+CuFb+YKIXQVxzAaWm/yuu0h+206kVzPepdYDwcHANEIaG4aFFra5zgAx3DdykFcqsrokuPcnFz4M9NyjQHACrnsS6Sh1JXhwCaD8mOhFBE5JXcngIlL0sFgN+FtlZ3q5Sx948NoiiFU10wZUpzPJOfKYS43bgq00TPRjgicfrcMR+r6vcp6ktszTvH+wL49CEhXrLKn4AAAAASUVORK5CYII="
+                         alt="macos-close">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABb0lEQVR4nO2WTU7DMBCFcwhQ5qU/4hyoHAAJENcAWjgLOxCIBUv2/GybmQI3aBGnoLCqjYwclVJQ4sRpIrrok2YTKfoyz88zCYKVlk2G0daCnmZ6UEwjJfhIimlkn2lG1/SjVnXAx2ZDCc6VQGuBcZVifGrBjXkKNxaCqhj7SvCeB0z5gLGSaK8UVDNOph14QX91P8Cxf6dcHjoPL9y5eW40y9jrst1IK8rvlumqKugPnC7c3TLaRdLrDRZo62Qm2IahauisODzKBgvu6wPj1nW+r3WBFdPIAcb47wuTQbQZeGrC6KSlO/ACMzreYMGWH1jopUarh8sXLs3o1gYWOsgE231a0wBRzgEyPefLGsBnTuhs8aeku3yo8Gb6a8gFJ10zbVdhebIWOdotBJ2f2wv/CAh6XtBv2SVexnZrr4rDnWARmZjWFdOpTWYhawXXhc+0iOx1sKtNC+7sFLJ/KUkxDe1w0DEd5l6ZlYJ/0BeEavbtBLBMZAAAAABJRU5ErkJggg=="
+                         alt="macos-minimize">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjklEQVR4nO2WS0oDQRCGqw/hwkeCZzFVkwgaXAjZeAHNw7O4UxQXLt37OIUhXYMz4ilM3JkQ6THIwKRrKp2ALlLQm6Gbr/9/qv4ZgHX9u4qxCrbWNZaeDWNqGD9nK3XPwGIHOKqsDtjf2zaMV4ZxbJim4rI4MUz30K/vLge10ZGxNCoFFi8whBibYVDG85mCxaA59WCpF6AUw6F5uFr5oLETZK9ke4JbpVzDdLsy6C+crmVqjFVF934BRy3h4nPO4Ng56Qdb6ulU4BgsnejBNIWY2n6bLT1JSjXKhfMPAhjfhRsfF+FF5YJLqaTY283ZBgVcaLBROFgBF8bqww9meisFl8AFq5Og5ips5qg1r+GCmgssdtRgr3LPecZTP5ijii9AhDPzlBdDZyAFyM9I3WgULLbwElQffovDlUFdN7/WN0FVA9pX/XGUQyfAdKiD5nN76R+BWheCKsZmkO3OXo4OYKl6aWwYxgvV2DiHLN3p36mm3DjE1DaMjy6FsnjNIhaTLByYzkpHZl3wB/UN0M1xl0A5QKYAAAAASUVORK5CYII="
+                         alt="macos-full-screen">
+                    <div class="left">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbklEQVR4nO2UMQqAMAxFcy7RXfH+F6je40mHgkNJozXYQt/0ISGPZIjI4AnADpy85wA2TRAbagmaIDEBcyZTuIDecxPEgUsmfyaoQn4T9A+GtTHU2hZo9CHA+0R4CzSaEASc3/VaKQlxhmXbgSQuRiRq4DmZmNQAAAAASUVORK5CYII="
+                             alt="web-design">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXUlEQVR4nO3RQQ2AQBAEwfUvbU1BkMCvD6qSETDpGX5md69nc7p1JEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRms8UYd65AQuRNXyM09jbAAAAAElFTkSuQmCC"
+                             alt="vertical-line">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbklEQVR4nO2PQQqAIBBFa9FZ25QFXSR3HTZ6IVlINFA24GYeiIv5/jdWlWEYZQEajYz0sAfWcL/IdDmCkYMNcA9zF2eBIUdQA3MiuUqANilfQvazQJKgVX6T+ERylvvf5cJPdDYXJFM8uuWGUZYd/E6/69UyskUAAAAASUVORK5CYII="
+                             alt="expand-arrow--v1">
+                        <div class="ltgt">
+                            <img style="width: 1.8rem;"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2klEQVR4nO3YTQqCUBTF8Tto0segolYYtIqgZUVBiAkP7+3ltXA/RSBhUDTsHTk/cOLsz9GHKEJERASmqqplWZYrQY9Q1ZuZ3VV1I+gR1l5wMTHGhZlduxHtdcyybCAIiqKYmVn8EHFqmmYiCApGJIJLJLbEGfrFdvcpI1LgXCIR3oclQghzVb18+naKMY4EZQlVNeglehXyxBjAZfI+PWZ5XddjQeKMAVtGVQ8hhKEgccYkissAHs17uAMgfP/s38H8Mv2xzFYQ+XsMZkT3MTOz9esGERGR/NcD8Tj5NxZA3sEAAAAASUVORK5CYII="
+                                 alt="less-than">
+                            <img style="width: 1.8rem;"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzklEQVR4nO3W2wkCMRSE4WMvgrdmBMXGvGFFyczuViF4aUEfIisKIss+Sk6cD1LAzwQSMxERkUzEGOd1XY/NM5ILADeSVwAzcx6RXufiMgbA4SPieQCcSI7Mk5TSgOTuO6ZdJsY4NU+SYjJeBsC2mGsGxThbJoQwsUJizl5jNorJTXHLkNx3xBybphmaw2XWXcvA06+574rBS0jP59LP1epZQhE/pSVyoSVyoSVyoSVykUp4sVtFRLQArEjeXUd0xPiNeKuqauk+QkRE/tIDBGYCLggXKOAAAAAASUVORK5CYII="
+                                 alt="more-than">
+                        </div>
+                    </div>
+                    <span class="spring"></span>
+                    <div class="right">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtElEQVR4nO2SMQ6DMAxFuQSoR0A9Sc7dDgztVIbuqVT1Fg+BMiES7GCKWuWNUeJn/7iqCr8IcCVOd5SY3cSzJmrg8VUx0AB98PUiMeCAFzo+wDkibaRibykN5yLx+qX1P30CJ1VNMsSxSWfbfjEVJ+Kd4td0P7ElXqAF3ruIScQbFg5zMYlF0jSfI74tTaqpkSvugPuSVFrD5pFFDYo4gxK1iCOXy2OD14qdgXx875RBFf6MAeVoDxazOQxKAAAAAElFTkSuQmCC"
+                             alt="external-link">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVElEQVR4nO3RsQ2AMBAEwe+/aZM7RCAvaKaCO+0MAPCutZmvWo7EKFKjSI0iNYrUKFKTK7IOG0c2ijxkTssNusuRGkVqFKlRpEaRGkVqflMEAOYjLpeMvG6ZmsnRAAAAAElFTkSuQmCC"
+                             alt="plus-math">
+
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAASklEQVR4nO3TOw4AIAgE0b3/pddGOyp/QZzXk0wCSEBG3qBGgC7P1gjYwkHA1btw5gBNIMCsoOMI9dwbDv8FRAhwlhWseDsA0CENH8r9H6P4Sd0AAAAASUVORK5CYII="
+                             alt="clone-figure">
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h2>기술스택</h2>
+                <table>
+                    <tr>
+                        <th>
+                            <img style="width: 3rem;"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC5UlEQVR4nO1aTYiNURh+/GVqlBmlsFGku/E3yYKYjYVZUPJTKDaKjcJiLCgNFpSRZDX+iklkpZAxRFn4icUINRQJ05iIWYya4XL01rvQ17nve875vnPvSfPUu7nfeZ+fe8893/nOvcAo0sc6ACMATKI1AmCtS5ADCZg1SpFHFTsSMGqU2u4SZE0CRo1S5FHF0gSMGqWWuASZnYBRo9QslyCTEjBqlKqHI4YSMGsqFHlzxrsEDJsK9dYnyCOBiK41Rq6Hir4zrglEbxAfrwV98uaM0wLRIOJjUNDv8CE6rMzTungZUKdoH/Ih26mQzbT0NBT0/ZiraJM3Z2xQyBZbegaqtGqt9wnSrJCtsvS8qFKQZp8gJYVsm6XnbpWClHyCNCpk+yw9l6oUpMEnyBgAwwLZSUvPiSqEGGZvXvgoEF5BPFwWdD+EED4TCO8jHu4Juk9DCG8KhK8QDy8F3RshhOcFwq+Ihy+CLnnyxhGB8A+AOfyklqfGZTTHA/gt6B4NCbKnCqtQds82XRm/OyTI5sghvls0Fyo9m0KCrIgcpNeiuVLpIU/e0HahPwB8y9RPjyAPLJpblJ55IUGmKqR7LT1XPYLQ2CxalR7y5I2xAH4JpO2WnlMeQWhsFseE8WX2FIR+gbjTMn4BgIMAbvG9xvYF7+KnPBqbxQVB7zNyoEcg7nY8tdzIc7/ksOHrEvSe5wnSLRBTyKLRI+jdzkPcKRDTtCsa/Z5T2RntyjblCYD9Fea7K+bzg9pj5qykdzxPEG05/Lfe85nTagATBU7aXy3jfVOvB39rniBbPYSyN8vr/MvSNABT+GTmonL4ZoQiL8FoCRTNrv/lAnha8gRpKsBAUdWUJ8iMBAIYLvISjAmJ/OgzxF5yYTmAcwD6ahCgj7XJQ6Ggx9NdAO5E+ndEmU9v2gAsCjnDCkE93zM6+Lwp1PwAb+lpeaUTzprD9dOqybseisn855yzAD5xneHX6Noo/nv8BZq0zmS5TXnIAAAAAElFTkSuQmCC"
+                                 alt="html-5--v1">
+                        </th>
+                        <td>HTML</td>
+                        <td></td>
+                        <td>그냥저냥 하는것 같습니다</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img style="width: 3.5rem;"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACVElEQVR4nO2ZP0gcQRTGPyEWYkTPgMQ0wWBhLExSKTZnESLBwipWUeFIJIWSwkCQiIWCiCHNpVIQ1CoRRCGGKAnYSGKhNgEb74qAFv7BgAZB7/RkZZBluHm3t/vGG8x88Jrbt983v92d25k7wMrKyuq66R+AVI7rkAMkbgBIjAPklwEgPzlAZg0AmeEAGTUAZIQDZMAAkH4OkC4DQDo5QFoMAHnGAdJABKyDT/tETpgj4D4RsM0RACAPQJLIqeIIuUUEJMQggqo4w6NVypBxMdATIqSEIeMu4X/CdLEutMU8eTck/wdE7yYYtcYMsiz5h4neVU6QeWaQr5J/M9H7jRNkghlkUvJvJ3rHOUHea34Lvyb8hjlB3mQB0uPDv4/w6+YEacsCZNCH/wfCr5UTpDELkI8+/McIvyecII+YJ/tzyX+a6H3ICXKHGaRJ8v9B9JZzgtwAcKoI+i311ngAqZfOWVH0nQHIB7P2FGF/pL5KDyDOitqtmKJvFxq0rgj7m2YlOwfgOE3vsTgmLzR3rmC/c6lFRVhSsToNAYgAWBAVEZ+lk2p1vQgN+kw8KjcD+BYSvp+gQVEi8JXPfUmJOFflG9XAgd4ME9h5xJbEuqmM8AmJlcIXxTxKueqdDpCXWbwn3FC3xVbV6+BTrnqhA4TaM6Qy7OsTPs9t1gFS53MwQapWB8i9HIBU6AChviZ1VSE0ybkrHQCmABxoGPgRgO8A3gKoxhWpAMBjAEPEos9LxcXfBs7vu0UwQF7vVk6uepC79VS8mTdERcVnzjErKyur/1zni6RsTvF5fPgAAAAASUVORK5CYII="
+                                 alt="css3">
+                        </th>
+                        <td>CSS</td>
+                        <td></td>
+                        <td>그냥저냥 하는것 같습니다</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img style="width: 3rem"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACmUlEQVR4nO2aT4hNURzHPwgLCmEWNupZTMlGNiiTUFYk/xbIkhjRLKbZybBgwVr+LshGCcWGpSIljYWFBeUxYSFk0gyTo1/9Vq975p7fue+9+0vzrd/m3fv7ne/nvHvuOffcC9Pyr13ABBCcxgSwMwXkpAOzoSTEY6kOOzAaSuJQCsgOB0ZDSYjHUq13YDSUxLoUkBUOjIaSaKSAzHdgNJTEPBI15sBsiIR4S9Y7B4ZDJN5aQJ5lNtKqsuM5l/hTS5F7DkAakTbEW7IuOwBZG2njkqXIGQcg2yNtnLYUOdYlkJw2+i0gexyD7LaA9DkG6bOA9DoG6bWALHIMstACMgMYdwgyrt5M+uAQpEmGXnQB5CvwHLgFDAMHdCJcCvwpyBdPZj3sAkhMSyL1H+SAXK8RZGWkvngy62yNIBsj9cWTWQNdBFmeuLIYyAHZ1wGQHmATcFxX2PJs8QP42ZLXH6kvnsza3AGQWLxvyRuOnCeezFoVKdbQDbLbwPc2gYy05F2MnCeezOpJ6PU5OjBlEL7MBGkWbIHeiZwrnsyaGZmULCoy8wt4DAwBayJLjicFeZPqKUuf2gwi1/jchLw3BbmfqaCRgoKWRVtuJ3wryH1FBT2K9MwNYH/CNWsBWQzsBa4CfwtyxUu2biYM1tfAOWBLwWUzFcgsHSNDOmZ+l7QjXrJ13nALDTqx3QeORjbD5bcjwF2dCC21L1QBGTQ21skYrAJy0AFA0BAv2drqACBoiJdsrXYAEDTES7aWOQAIGuIlW7OdvPQZUy+VtAG4BozWADCqbYuHtkqW8Cd0AuvE1xGTulNyaooFZdslLyS36fuKZgXzX/TZRm6vssNZu1L/rVp6PVcLdPtfFoAfNa7oBztybFr/vf4BJe0VkkV0UVgAAAAASUVORK5CYII="
+                                 alt="javascript-logo">
+                        </th>
+                        <td>JavaScript</td>
+                        <td></td>
+                        <td>배우긴 했습니다</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAB50lEQVR4nO3YzYtPURjA8Q8bsSBveZ2k2BDZyR9gNwtJIopJyUJhIRuyYIGNDbGR5Sh5WSgLC6Wx8JosyEI28q5ZsGDE1a2jptvo3t/8zv3NmTrferbP+Z7TOc95ziGTyWQymcnFPGzHfbySOItxDHfxAT9RjIphCbMf3yvC1SgnliQna8T/Rb8E2Yo/NeK/cUiCrMC3Gvn32ChRbtfIl5VngUTZXCP/ErMlygy8qZnAHglzpsGhTXb112OkZgLPJcrCBlunjIsSZBGeNbywdkiIKdgZ6nnRMPokIl5eQEMdiBd4PdHifeHaf9GheBHi8kRIL8GBcHPW9TVFTezulfTSID0U6nYRKZa1KT0H+3AvsnQRotx2rTAtvJTqHhzdxsE25JfjacviRSizM2PLr8a7HsgXoTuNyvyG136MOBFbfiru9ED8Fw5rgbMti4/gCtaNR24TbuBtSFQenocYxCncHGPAsmQ+wDkcxZHwk3Aet/AktACf8aPBBAa6Wd0t+NjBSl3AynGO1T9Gzkdhi3b9XTdYI1+2BWu6bOaq5fcrVonEtv+If8HeCKs0UMn7CRti/kEOVwYo9+9xzIqQf+6obVo2d9fDgyYaV0MJKw/eNezC9HjpXcJjnMbaiHkzmUwmkzGp+QsJ6MA2EAjjrgAAAABJRU5ErkJggg=="
+                                 alt="maria-db">
+                        </th>
+                        <td>MariaDB</td>
+                        <td></td>
+                        <td>배웠던것 같습니다</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img style="width: 3rem"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAADuUlEQVR4nO2aSWgVQRCGPzWuBw8u8ZJ4U4JLEEUTUNGAiKCSIG43MRcxQhAiehEUEb2IJ+NFD+YWkaAoCQiijyCKG0bUi6KiRkQRF4h7TKShB4pm1pd50zMv80Pxhqma7up/uqr7VQ/kyDFS1AAPgL/AsAUZAg5hCQ3AoKWBm3I46cFXAAPCga/AXeB2gmKVhFbR8UPswOpMuCI6rcUOnP5fGSQcTaLzgujQFpz+lS8HkyahkDICSJqEQgoJSJSEgg8B9cD+kKJs4yQgMRIKHgTUF7GG18VMQCIkFFJEQFhpJqEQqIsQAsUOHr0NjkLAdcosCe4EbkbYMbqFivUkaDNZpiYH2EyWRSMngHiSYBLJMvEckDbkSZA8BxA5BGoi1PrKbhVoiFjrK6skWBGy1vetXJNga8haX9muAi9D1vrKloBP4oFFo5GA5+KBvtFIQMHI8CrZ9QI9hnwWNj2WpQtoLBUBwxmSJ8CEOAm4b/HQs1jpjZOArGAj8FP4PWO0EaBwUvi9gwQJmAZsA/ZpqRK6Kn3vgCFqszXfo70tLvZKNgOTffzYK/xW1yUnYCrQDvwxYvCCsOnyiVVV0T0NjBP2tQHx/QZYlgYCZumMazr4G9gt7G6ESFpHhP3qEPZqo1Zpk4CxuhTt2FwFVnpMT4cA9SsxD3isdd+BKS4EqGsHSt8W8A1AYgRsF/ozwBiftrwIUNgq2lkaQICDp1rXbZOAbq17L96cF25pW/VrokX0szAEAeOBd1qncos1Aj5o3dkQbX0UNYU1QlrEVrpfJMJm0fcJYb8BuCh0u2wS8EvrjoVo60tAQhvSy57bILxElekm2iTgtcty54V+n4H0G4M384Ip/4DzwHSPvhIjoEPrfgDVIdvqM0JggbH+45ID2oT9CmBmQF+JEVAnjqXv+LyRoFXADUGrgB8S3Qi1C5sP+lPV9fpNqaJqpgm4Jh6Y5GGjlqRzHrF6KusEdIgH1gbYbtIl8yEPAtpd7vlhtv5bGya/lIyAdeIBFeNhUKlzw3IjBNT1YuNeEKqLGLxJgPq3WTQB5vqtNiRZQKfwWc3MERHQZEzrt3oam8dVKlyOl+AYLKp0Cn8HXeqCkQlANxz1K6w0iKoMEQcBzknvs4wQMegx+BERIKs/jXp35ky7F6Jh2yHQ5FEOj42ArBdPcwLIZwCxh8DlkKfItrFE+HkpzoZbQ54i24Qq4D4Sfu6Ju/GBEKfItqTX+IxnQPscKxoycniqfFxFiTA3xafIyqd7wJxSDT4HGcd/UAbuOfcUl7cAAAAASUVORK5CYII="
+                                 alt="external-cpp-file-types-others-iconmarket-3">
+                        </th>
+                        <td>CPP</td>
+                        <td></td>
+                        <td>수박겁탈기</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEnUlEQVR4nN2aa4hVVRTHf46ZTZlmjpmGpSkkmekQiOUHH4WvUUtLEissCLEs9YNlmIlPFDH90JT0UrGH4SPoaVKhMKZM5iNfUGaTQmmELyIp0xlZ9T+w2Jx7vTP34bnzh8Wce/e55+y1115r/dfaA4VHFxoJngaupxFgPvAEjQA7gbcpcowG6oB1FDG6AH9IkaUUKToDP0kJk+EUIXoBvzklDgFNKTKMAM44JWqBYWnubwm0IkFoAswCLjglTBYG990CPAt8BNQALwLNSAhKgbWBAnWabInuGQR85cb2Aj1JEG4AqmOUqAJaAG2Bz4OxV4HmJAitgN0xSmwFrgV6BE7/L/AMCcMVwOYYJXbIgU2Ouu/PAkNIICbFKPGDtpJhTjA2loTi22Cip5QEIxxyY7b9EovfA0UmurGrlD+isU0kGNVuouc0+QiWF8678T/lM4nEZDfRkzHjVYHF5pFQtA62V3kw3j9Q5C+gPQnFg26i78WMrwmUWUyCscwlu07BWBlwzCnyIwlGiaxhE30lZnyCU8SKLJKuzDJl79AqHZ0ixrmKAlOBDcF3d7oQ3YfLiBbAUOA54DXR9fWqKcpjKj8rou5yn1fIUg+neUd3oFK5qUpb1Fh1TmBb4gPgb7c1TgNPBskvDlENMgp4C+ia4r6rRefNUo8HSfZwrirH72NIYY0S4VCtusltwK3iWW113VOTG6Z20COy4AJglQqs75RrCBjBJ+59tguyxuoYRXIlXwIdUry3j7tvXa5q8JHAu6LnngRmKpZbflWh9SYwDRisZ6fCfblWJISRvtuBB4Dpyg9erN64XxMpFx2JfKU+WOQUmZ0HPf7L0u8ojN6bjxfwf6Q65ayZKkg0GFeKXkQr9bPaOH2Bdims11nWmaDIZb8/APRL8Y4S4DP3jhfIU7vnaAb+EK1mOqmVv9jiRGiiHBU9x3wpb7BVngnsb2CkOg68r8Toi6zm+t4aexvFBAqGG4EKYArwMvC6KPtaEchKFVKWOwa6hkSIa4AZsoDln4LCItIXoueZtDrtyO0xMYKGRLG8oGPQoN4ri0x1YXiamPB6dVJ8/tmqEF4wlAH3KGeM1bU55N05yOq7UkS6COmSZb22zaeKHL7Wrtaeby1n3VPPyR9UVBqUwURXZusvA0S3/QRmKPTGoY1aoE8pmi2SzBPZGycLmnUzxXVi2F9no0hlTLwvZCTp6rqXW7J50EDRD6+Mrc5L+aAKLvwOUej+xzXzsq4kK4Kuh5dflCfmqj06XD7VLk0YbibyeIeoyWhFuDeAbW7ydZKPgW7BM0pj6paMUKpEti3mGC1TORuE6XRSo35X2OCLDlX3aIGzgq32QzoH3KTj5nAVM5VzIo4WFZcorN+c4r29RFvO629eYNn5JpWz/ZVrxkgsIY7XdYXGu4ueXyrslgGPijXUajcszeWxdol6VSMUagcon2SLTlJ2pjJ+1L2/oEPU3uQRLWWB5fKhfaq/VyuHTHcyRRZ6Xj5gNcmH+t3pmG33jX4XNvgKAlPMopH9P5ZxLlvJ7fKFEzpuMJZgfmXXR0RRrFNii2HHd7b9LAzXGxcBVJvnR5MMWnsAAAAASUVORK5CYII="
+                                 alt="java-coffee-cup-logo--v1">
+                        </th>
+                        <td>JAVA</td>
+                        <td></td>
+                        <td>두번 배웠는데도 심연임</td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEiElEQVR4nO2ZS0gkRxjH/xpHURQ1DxTcCLnoYfABYnAP4kGNFwMq6sR4EwRPCgqu7EV8bVT04MZExYuHgIdhN2iiBo3gQfCgh2gSBQVlk6A4Or4fM/HxhWqql3acdqqnu+cQ5g8F09XdX/2+6qqvvqoBggrqf63IQDX0AYDnAF4CeAPgTwBHAP4FcMN//w7gLYAWADkAQgRs/mA2+KcAugH8A4A0lr8BdAF4pmLbBuAewGdmgH8CYASA2w9wz+IG8BrAxwr77Ov8xu83Gw3/NQCnAeCexQGgkrfxpaJ+xShwC4BRE8DJo7zm0Mo63cMoCsB0AOBJLvHx8VRVVSVfN+jt+YDCA6ChoSGanp6Wr3/V40Aghg0pS0VFBTFdXV1RZGQk8XAc5w98daDhc3Nz6eLigmQVFRXJ91hY1aSPABwEEr60tJQuLy9JqYGBAfn+91odGAkUeHh4OHV2dtLd3R15amNjQ36OrQvCembQIuWz5Ofn09raGqnp/v5eikgA7gDEijrQbSZ0WFgYlZSU0Pz8PImIOcnf/UIEPpTnKbpBo6KiKCkpiaxWqzS+W1paaHx8nI6OjkiLmpubZZv1Ig489we0vLxcit2Li4u0vb0thUCjNDo6Krf1rYgDL0XBo6OjqaOjQ3OP+tLBwcGD67m5ObnNX0QceCMCn52dLfW00XK73bS0tPSgbnNzU253Q8SBP3zB5+XlPVhsjNTY2BidnJw8qHM4HHLbbG761JOpcnJyMjmdTlPgDw8Pqamp6VE9c4i3z9h86sn4PzExQWapurqaVlZWHtWzgMDbd+tyIDMz0zT4wcFBstlsql+GM7h0DaG+vj5T4GdmZiguLk41KKyursoMLDfzfxIvLy8bDr+wsCClzMPDw6rPTE1NyQxrIg68VXOARQMjZbfbJfiysrInn2NfnjPYdS1kRi1Yt7e31NbWRiEhIdJ64iskFxcXywwvRBzIUXNgf39fN/zOzo60aWH2rFarT5vHx8cUEREhM2SLJnN/eXNgcnLSb3C2Uenu7pbSD2YrKytLaEgqhs87ziakb7w50NDQ4Fdew/KlhISE93bYacP5+bnPd09PTykxMVF+7xX0bmhiY2OFhtHe3p4UVQoLC8lisbx/n4XKkZERYedra2uV8T8JGjXk7SsUFBTQ9fX1o55ioa6xsZEyMjKkyem5ZaypqZEcE1Vvb6/ShlAa7akP1Tb1DJLl/nV1dZSWlkahoaFeJ31qaiq1trbS7u6uMLjL5aL6+nplJxx6nJtq0lciqbWypKenS9Bs9dQil8slZaIpKSmeNiugU8OekOwEgcXurq4uqadycnKop6eHtra2noS8ubmR1hKW26yvr9Ps7Cz19/dTZWUlxcTEeOuQQRgg9kfDj0rDcr5+dnam6etoLD8DCINBYoe7U7Lx9vZ2CZ6FR5Pgf+JtGiqLWmQyuAwa2fPeZDPpyNFhxITVcm76HV9g9IK7eJxnYTvgSuJph9fcyUdh77zyZ4U1QyzJ+pz/hWrnGw8nT0fc/Pcqv/eCZ5XCiVlQQQUFVf0HOYcSe2k0qFQAAAAASUVORK5CYII="
+                                 alt="spring-logo">
+                        </th>
+                        <td>SpringBoot</td>
+                        <td></td>
+                        <td>쓰면서도 내가 뭘 하고있는지 모름</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- 경??????력??????? -->
+
+        <div id="experience" class="modal">
+            <div class="modal-bar">
+                <div class="bar-container">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoElEQVR4nO2Wz07CQBDG+xIe/BuPHvQEN/UBTLTdb5q+hAI+izeNxoNH7yhvIr6ABm+IYHeBYAbBlMhuh1IjByaZZNN08tv5dmZ2PW9pi2adKNoyQFkDNQPUNfDBPlrXDFGpEwSbuQHbUbRugCsN9AzRwOUa6Bui+88g2J4LGhMpDbTSgL82QPQeA34mqCE6H2UwE3Qie6CSJdN+VmgSLs68DWxkkdcle9v31yQS3+YFTfh1ass4qnffhGFREzWmZNUwShWMUgcWyXuspD1boGzdtVIF/kcDu0k4r/nbMD4Mi9Z44MwK1kSPjrP6AYzh0745Cq3qOt/nlEKZBAmho4zr9owF1ayBNx0Ee+OYmGhHA6+CuFb+YKIXQVxzAaWm/yuu0h+206kVzPepdYDwcHANEIaG4aFFra5zgAx3DdykFcqsrokuPcnFz4M9NyjQHACrnsS6Sh1JXhwCaD8mOhFBE5JXcngIlL0sFgN+FtlZ3q5Sx948NoiiFU10wZUpzPJOfKYS43bgq00TPRjgicfrcMR+r6vcp6ktszTvH+wL49CEhXrLKn4AAAAASUVORK5CYII="
+                         alt="macos-close">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABb0lEQVR4nO2WTU7DMBCFcwhQ5qU/4hyoHAAJENcAWjgLOxCIBUv2/GybmQI3aBGnoLCqjYwclVJQ4sRpIrrok2YTKfoyz88zCYKVlk2G0daCnmZ6UEwjJfhIimlkn2lG1/SjVnXAx2ZDCc6VQGuBcZVifGrBjXkKNxaCqhj7SvCeB0z5gLGSaK8UVDNOph14QX91P8Cxf6dcHjoPL9y5eW40y9jrst1IK8rvlumqKugPnC7c3TLaRdLrDRZo62Qm2IahauisODzKBgvu6wPj1nW+r3WBFdPIAcb47wuTQbQZeGrC6KSlO/ACMzreYMGWH1jopUarh8sXLs3o1gYWOsgE231a0wBRzgEyPefLGsBnTuhs8aeku3yo8Gb6a8gFJ10zbVdhebIWOdotBJ2f2wv/CAh6XtBv2SVexnZrr4rDnWARmZjWFdOpTWYhawXXhc+0iOx1sKtNC+7sFLJ/KUkxDe1w0DEd5l6ZlYJ/0BeEavbtBLBMZAAAAABJRU5ErkJggg=="
+                         alt="macos-minimize">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjklEQVR4nO2WS0oDQRCGqw/hwkeCZzFVkwgaXAjZeAHNw7O4UxQXLt37OIUhXYMz4ilM3JkQ6THIwKRrKp2ALlLQm6Gbr/9/qv4ZgHX9u4qxCrbWNZaeDWNqGD9nK3XPwGIHOKqsDtjf2zaMV4ZxbJim4rI4MUz30K/vLge10ZGxNCoFFi8whBibYVDG85mCxaA59WCpF6AUw6F5uFr5oLETZK9ke4JbpVzDdLsy6C+crmVqjFVF934BRy3h4nPO4Ng56Qdb6ulU4BgsnejBNIWY2n6bLT1JSjXKhfMPAhjfhRsfF+FF5YJLqaTY283ZBgVcaLBROFgBF8bqww9meisFl8AFq5Og5ips5qg1r+GCmgssdtRgr3LPecZTP5ijii9AhDPzlBdDZyAFyM9I3WgULLbwElQffovDlUFdN7/WN0FVA9pX/XGUQyfAdKiD5nN76R+BWheCKsZmkO3OXo4OYKl6aWwYxgvV2DiHLN3p36mm3DjE1DaMjy6FsnjNIhaTLByYzkpHZl3wB/UN0M1xl0A5QKYAAAAASUVORK5CYII="
+                         alt="macos-full-screen">
+                    <div class="left">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbklEQVR4nO2UMQqAMAxFcy7RXfH+F6je40mHgkNJozXYQt/0ISGPZIjI4AnADpy85wA2TRAbagmaIDEBcyZTuIDecxPEgUsmfyaoQn4T9A+GtTHU2hZo9CHA+0R4CzSaEASc3/VaKQlxhmXbgSQuRiRq4DmZmNQAAAAASUVORK5CYII="
+                             alt="web-design">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXUlEQVR4nO3RQQ2AQBAEwfUvbU1BkMCvD6qSETDpGX5md69nc7p1JEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRms8UYd65AQuRNXyM09jbAAAAAElFTkSuQmCC"
+                             alt="vertical-line">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbklEQVR4nO2PQQqAIBBFa9FZ25QFXSR3HTZ6IVlINFA24GYeiIv5/jdWlWEYZQEajYz0sAfWcL/IdDmCkYMNcA9zF2eBIUdQA3MiuUqANilfQvazQJKgVX6T+ERylvvf5cJPdDYXJFM8uuWGUZYd/E6/69UyskUAAAAASUVORK5CYII="
+                             alt="expand-arrow--v1">
+                        <div class="ltgt">
+                            <img style="width: 1.8rem;"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2klEQVR4nO3YTQqCUBTF8Tto0segolYYtIqgZUVBiAkP7+3ltXA/RSBhUDTsHTk/cOLsz9GHKEJERASmqqplWZYrQY9Q1ZuZ3VV1I+gR1l5wMTHGhZlduxHtdcyybCAIiqKYmVn8EHFqmmYiCApGJIJLJLbEGfrFdvcpI1LgXCIR3oclQghzVb18+naKMY4EZQlVNeglehXyxBjAZfI+PWZ5XddjQeKMAVtGVQ8hhKEgccYkissAHs17uAMgfP/s38H8Mv2xzFYQ+XsMZkT3MTOz9esGERGR/NcD8Tj5NxZA3sEAAAAASUVORK5CYII="
+                                 alt="less-than">
+                            <img style="width: 1.8rem;"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzklEQVR4nO3W2wkCMRSE4WMvgrdmBMXGvGFFyczuViF4aUEfIisKIss+Sk6cD1LAzwQSMxERkUzEGOd1XY/NM5ILADeSVwAzcx6RXufiMgbA4SPieQCcSI7Mk5TSgOTuO6ZdJsY4NU+SYjJeBsC2mGsGxThbJoQwsUJizl5jNorJTXHLkNx3xBybphmaw2XWXcvA06+574rBS0jP59LP1epZQhE/pSVyoSVyoSVyoSVykUp4sVtFRLQArEjeXUd0xPiNeKuqauk+QkRE/tIDBGYCLggXKOAAAAAASUVORK5CYII="
+                                 alt="more-than">
+                        </div>
+                    </div>
+                    <span class="spring"></span>
+                    <div class="right">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtElEQVR4nO2SMQ6DMAxFuQSoR0A9Sc7dDgztVIbuqVT1Fg+BMiES7GCKWuWNUeJn/7iqCr8IcCVOd5SY3cSzJmrg8VUx0AB98PUiMeCAFzo+wDkibaRibykN5yLx+qX1P30CJ1VNMsSxSWfbfjEVJ+Kd4td0P7ElXqAF3ruIScQbFg5zMYlF0jSfI74tTaqpkSvugPuSVFrD5pFFDYo4gxK1iCOXy2OD14qdgXx875RBFf6MAeVoDxazOQxKAAAAAElFTkSuQmCC"
+                             alt="external-link">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVElEQVR4nO3RsQ2AMBAEwe+/aZM7RCAvaKaCO+0MAPCutZmvWo7EKFKjSI0iNYrUKFKTK7IOG0c2ijxkTssNusuRGkVqFKlRpEaRGkVqflMEAOYjLpeMvG6ZmsnRAAAAAElFTkSuQmCC"
+                             alt="plus-math">
+
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAASklEQVR4nO3TOw4AIAgE0b3/pddGOyp/QZzXk0wCSEBG3qBGgC7P1gjYwkHA1btw5gBNIMCsoOMI9dwbDv8FRAhwlhWseDsA0CENH8r9H6P4Sd0AAAAASUVORK5CYII="
+                             alt="clone-figure">
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h2>경력</h2>
+                <span>어....</span>
+            </div>
+        </div>
+        <!-- 프로젝트 -->
+
+        <div id="project" class="modal">
+            <div class="modal-bar">
+                <div class="bar-container">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABoElEQVR4nO2Wz07CQBDG+xIe/BuPHvQEN/UBTLTdb5q+hAI+izeNxoNH7yhvIr6ABm+IYHeBYAbBlMhuh1IjByaZZNN08tv5dmZ2PW9pi2adKNoyQFkDNQPUNfDBPlrXDFGpEwSbuQHbUbRugCsN9AzRwOUa6Bui+88g2J4LGhMpDbTSgL82QPQeA34mqCE6H2UwE3Qie6CSJdN+VmgSLs68DWxkkdcle9v31yQS3+YFTfh1ass4qnffhGFREzWmZNUwShWMUgcWyXuspD1boGzdtVIF/kcDu0k4r/nbMD4Mi9Z44MwK1kSPjrP6AYzh0745Cq3qOt/nlEKZBAmho4zr9owF1ayBNx0Ee+OYmGhHA6+CuFb+YKIXQVxzAaWm/yuu0h+206kVzPepdYDwcHANEIaG4aFFra5zgAx3DdykFcqsrokuPcnFz4M9NyjQHACrnsS6Sh1JXhwCaD8mOhFBE5JXcngIlL0sFgN+FtlZ3q5Sx948NoiiFU10wZUpzPJOfKYS43bgq00TPRjgicfrcMR+r6vcp6ktszTvH+wL49CEhXrLKn4AAAAASUVORK5CYII="
+                         alt="macos-close">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABb0lEQVR4nO2WTU7DMBCFcwhQ5qU/4hyoHAAJENcAWjgLOxCIBUv2/GybmQI3aBGnoLCqjYwclVJQ4sRpIrrok2YTKfoyz88zCYKVlk2G0daCnmZ6UEwjJfhIimlkn2lG1/SjVnXAx2ZDCc6VQGuBcZVifGrBjXkKNxaCqhj7SvCeB0z5gLGSaK8UVDNOph14QX91P8Cxf6dcHjoPL9y5eW40y9jrst1IK8rvlumqKugPnC7c3TLaRdLrDRZo62Qm2IahauisODzKBgvu6wPj1nW+r3WBFdPIAcb47wuTQbQZeGrC6KSlO/ACMzreYMGWH1jopUarh8sXLs3o1gYWOsgE231a0wBRzgEyPefLGsBnTuhs8aeku3yo8Gb6a8gFJ10zbVdhebIWOdotBJ2f2wv/CAh6XtBv2SVexnZrr4rDnWARmZjWFdOpTWYhawXXhc+0iOx1sKtNC+7sFLJ/KUkxDe1w0DEd5l6ZlYJ/0BeEavbtBLBMZAAAAABJRU5ErkJggg=="
+                         alt="macos-minimize">
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAABjklEQVR4nO2WS0oDQRCGqw/hwkeCZzFVkwgaXAjZeAHNw7O4UxQXLt37OIUhXYMz4ilM3JkQ6THIwKRrKp2ALlLQm6Gbr/9/qv4ZgHX9u4qxCrbWNZaeDWNqGD9nK3XPwGIHOKqsDtjf2zaMV4ZxbJim4rI4MUz30K/vLge10ZGxNCoFFi8whBibYVDG85mCxaA59WCpF6AUw6F5uFr5oLETZK9ke4JbpVzDdLsy6C+crmVqjFVF934BRy3h4nPO4Ng56Qdb6ulU4BgsnejBNIWY2n6bLT1JSjXKhfMPAhjfhRsfF+FF5YJLqaTY283ZBgVcaLBROFgBF8bqww9meisFl8AFq5Og5ips5qg1r+GCmgssdtRgr3LPecZTP5ijii9AhDPzlBdDZyAFyM9I3WgULLbwElQffovDlUFdN7/WN0FVA9pX/XGUQyfAdKiD5nN76R+BWheCKsZmkO3OXo4OYKl6aWwYxgvV2DiHLN3p36mm3DjE1DaMjy6FsnjNIhaTLByYzkpHZl3wB/UN0M1xl0A5QKYAAAAASUVORK5CYII="
+                         alt="macos-full-screen">
+                    <div class="left">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbklEQVR4nO2UMQqAMAxFcy7RXfH+F6je40mHgkNJozXYQt/0ISGPZIjI4AnADpy85wA2TRAbagmaIDEBcyZTuIDecxPEgUsmfyaoQn4T9A+GtTHU2hZo9CHA+0R4CzSaEASc3/VaKQlxhmXbgSQuRiRq4DmZmNQAAAAASUVORK5CYII="
+                             alt="web-design">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAXUlEQVR4nO3RQQ2AQBAEwfUvbU1BkMCvD6qSETDpGX5md69nc7p1JEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRGkVqFKlRpEaRms8UYd65AQuRNXyM09jbAAAAAElFTkSuQmCC"
+                             alt="vertical-line">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAACXBIWXMAAAsTAAALEwEAmpwYAAAAbklEQVR4nO2PQQqAIBBFa9FZ25QFXSR3HTZ6IVlINFA24GYeiIv5/jdWlWEYZQEajYz0sAfWcL/IdDmCkYMNcA9zF2eBIUdQA3MiuUqANilfQvazQJKgVX6T+ERylvvf5cJPdDYXJFM8uuWGUZYd/E6/69UyskUAAAAASUVORK5CYII="
+                             alt="expand-arrow--v1">
+                        <div class="ltgt">
+                            <img style="width: 1.8rem;"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA2klEQVR4nO3YTQqCUBTF8Tto0segolYYtIqgZUVBiAkP7+3ltXA/RSBhUDTsHTk/cOLsz9GHKEJERASmqqplWZYrQY9Q1ZuZ3VV1I+gR1l5wMTHGhZlduxHtdcyybCAIiqKYmVn8EHFqmmYiCApGJIJLJLbEGfrFdvcpI1LgXCIR3oclQghzVb18+naKMY4EZQlVNeglehXyxBjAZfI+PWZ5XddjQeKMAVtGVQ8hhKEgccYkissAHs17uAMgfP/s38H8Mv2xzFYQ+XsMZkT3MTOz9esGERGR/NcD8Tj5NxZA3sEAAAAASUVORK5CYII="
+                                 alt="less-than">
+                            <img style="width: 1.8rem;"
+                                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAzklEQVR4nO3W2wkCMRSE4WMvgrdmBMXGvGFFyczuViF4aUEfIisKIss+Sk6cD1LAzwQSMxERkUzEGOd1XY/NM5ILADeSVwAzcx6RXufiMgbA4SPieQCcSI7Mk5TSgOTuO6ZdJsY4NU+SYjJeBsC2mGsGxThbJoQwsUJizl5jNorJTXHLkNx3xBybphmaw2XWXcvA06+574rBS0jP59LP1epZQhE/pSVyoSVyoSVyoSVykUp4sVtFRLQArEjeXUd0xPiNeKuqauk+QkRE/tIDBGYCLggXKOAAAAAASUVORK5CYII="
+                                 alt="more-than">
+                        </div>
+                    </div>
+                    <span class="spring"></span>
+                    <div class="right">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAtElEQVR4nO2SMQ6DMAxFuQSoR0A9Sc7dDgztVIbuqVT1Fg+BMiES7GCKWuWNUeJn/7iqCr8IcCVOd5SY3cSzJmrg8VUx0AB98PUiMeCAFzo+wDkibaRibykN5yLx+qX1P30CJ1VNMsSxSWfbfjEVJ+Kd4td0P7ElXqAF3ruIScQbFg5zMYlF0jSfI74tTaqpkSvugPuSVFrD5pFFDYo4gxK1iCOXy2OD14qdgXx875RBFf6MAeVoDxazOQxKAAAAAElFTkSuQmCC"
+                             alt="external-link">
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAVElEQVR4nO3RsQ2AMBAEwe+/aZM7RCAvaKaCO+0MAPCutZmvWo7EKFKjSI0iNYrUKFKTK7IOG0c2ijxkTssNusuRGkVqFKlRpEaRGkVqflMEAOYjLpeMvG6ZmsnRAAAAAElFTkSuQmCC"
+                             alt="plus-math">
+
+                        <img style="width: 1.5rem;"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAASklEQVR4nO3TOw4AIAgE0b3/pddGOyp/QZzXk0wCSEBG3qBGgC7P1gjYwkHA1btw5gBNIMCsoOMI9dwbDv8FRAhwlhWseDsA0CENH8r9H6P4Sd0AAAAASUVORK5CYII="
+                             alt="clone-figure">
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <h2>프로젝트</h2>
+                <span>CGV 클론</span>
+            </div>
+        </div>
+
+        <!--배경 화면-->
+        <div class="code-frame">
+            <div class="class-code">
+                <div class="const-name">const</div>
+                <div class="intro-name neon-text">&nbsp Introduce</div>
+                <div class="yellow">&nbsp=&nbsp{</div>
+            </div>
+            <div class="intro">
+                <div class="white">&nbsp &nbsp Fisrt name :</div>
+                <div class="green">&nbsp "Hyeon Jae"</div>
+            </div>
+            <div class="intro">
+                <div class="white">&nbsp &nbsp Last name :</div>
+                <div class="green">&nbsp "Jeon"</div>
+            </div>
+            <div class="intro">
+                <div class="white">&nbsp &nbsp Year :</div>
+                <div class="green">&nbsp "1994"</div>
+            </div>
+            <div class="intro">
+                <div class="white">&nbsp &nbsp Month :</div>
+                <div class="green">&nbsp "August"</div>
+            </div>
+            <div class="intro">
+                <div class="white">&nbsp &nbsp Day :</div>
+                <div class="green">&nbsp "15th"</div>
+            </div>
+            <div class="class-code">
+                <div class="yellow">}</div>
+            </div>
+            <div class="intro">
+                <div class="white">System.</div>
+                <i class="green">out</i>
+                <div class="white">.pirntln</div>
+                <div class="white">&nbsp(</div>
+                <div class="red">&nbspIntroduce</div>
+                <div class="white">&nbsp);</div>
+            </div>
+        </div>
+    </section>
+
+    <!--Dock-->
+    <div class="app-container">
+        <div class="app-frame">
+            <button id="app-1" class="app">
+                <img style="width: 4rem" src="/assets/images/appimage/user.png" alt="me">
+            </button>
+            <span>자기소개</span>
+        </div>
+
+        <div class="app-frame">
+            <button style="background: linear-gradient(to bottom, #ffffff, #f5f5f5, #f0e6d6); border: 1px solid #6a6acd;"
+                    id="app-2" class="app">
+                <img class="image"
+                     src="/assets/images/appimage/icons8-tech-64.png"
+                     alt="기술스택">
+            </button>
+            <span>기술스택</span>
+        </div>
+
+        <div class="app-frame">
+            <button style="background: linear-gradient(to bottom, #7eff62, #1ec800, #00a400);
+            border: 1px solid #34C759" id="app-3"
+                    class="app">
+                <span>Career</span>
+            </button>
+            <span>경력</span>
+        </div>
+
+        <div class="app-frame">
+            <button style="background: linear-gradient(to bottom, #00a9ff, #0077cc);
+            border: 1px solid #00a9ff;"
+                    id="app-4" class="app">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC8ElEQVR4nO2bPWsVQRSGhxDtUnq5aqeVQawVtLGx0FRi/oAfraCIloIfUSvBStEiKa3yB4xgIhgSVAxiZRdLET/AiJhHNp4r697dvTOzM7Pu7rzdvXN455xnz+6d5c4oFRUVVaeACeAgcA64C9wGDqi2CRgH9gHTwHVgHngPbDKsn8BR1VQBu4FjwCVgFngJbJCvDRmflfiH8v2qalj73gOeAh8LCt2UKz4vHTAtHTGe8dw26AL1n7XvHmAKuAo8Bt4CvwqK/QQsAfeB88DhBJbBfFvyW1V5AnuBCxbtm7T9Lgfz1wMAGAPu5DyYtNrXYR61ATgjc3+Xh9FZuccnAudRG4DXMvfJ4JP/m4cPfQBuAdvLJv4hwcVBzQUw0MzIiVXN8pGH/BJtdULQiW3kK4+RvkQAfsibStKIHWCopcpgGRUQSKaV6+bdOADKcXwEIHJJ/jnF+iavx1O6fhXyqA2Arm7oelbJo3IcDidOXouBy6nl9QkXvo0BMJBASLSgOgqgL2FfXPo2BoBP384BABYw15M2AVi2APCiTQB2AG9k+B2wUyOmXysA/vxJkuizC98yCGXF1wngSvZerOoL9IA1CVuTz0PfGeeL34XQcRe+qZhswaXFewWgoWu6niZ5ZCCUFq/li+bE2fgCfU3a3uTK5+UhRa4CKwVt3ZOx3PEgAJRjpSCmH2qFT35TX/uA8ACM7nFdX/uA8AAGV72vswbQ9bUPCA8gu5CpBKGJAHo5YyN/71sDQBWPpyGsuPJVEYDIgOgi8Ew33sC3GbeAL6UAGL3s6PraB4QH8BdC1eLTvvYBgdSYhVAAAHlL4X5VX/uAQErnYfKyY+JrFxBIvvKIAETByZvKRx7AEbFd7/o2uZs6GyVPBa14OA8fWk+KH7VR8nRqE/SjLm6VHZPtpN3cLD2QnA24CMwBr1LPhnZvly9S5w5MGB6ZOdT6IzMVD03NGZ46edCYQ1MWt9FkJ47NVTw4OQPsNzKJiopSlvoNtLowi1LDQ3cAAAAASUVORK5CYII="
+                     alt="microsoft-project">
+            </button>
+            <span>프로젝트</span>
+        </div>
+
+        <div class="image-frame">
+            <a href="https://github.com/Nyeonjae/" target="_blank">
+                <img class="image1" src="/assets/images/appimage/github.png" alt="깃">
+            </a>
+            <span>GitHub</span>
+        </div>
+
+        <div class="image-frame">
+            <a href="https://meowing-blanket-804.notion.site/Study-13d6cf56a98280b98f76feadd6cfa828?pvs=4"
+               target="_blank">
+                <img class="image" src="/assets/images/appimage/notion.png" alt="노션">
+            </a>
+            <span>Notion</span>
+        </div>
+
+    </div>
+
+
+</main>
+</body>
+</html>
